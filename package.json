@@ -1,0 +1,25 @@
+{
+  "name": "as-simple-astar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "ascMain": "assembly/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "asc ./assembly/index.ts -o dist/as-simple-astar.wasm",
+    "build:debug": "asc ./assembly/index.ts -o dist/as-simple-astar-debug.wasm -t dist/as-simple-astar-debug.wat --debug --sourceMap",
+    "start": "node index.js",
+    "start:debug": "env DEBUG=1 node index.js",
+    "test": "asp --verbose",
+    "benchmark": "cd ./benchmarks && npm run build && npm run start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@as-pect/cli": "^4.0.0",
+    "assemblyscript": "^0.17.2"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.17.2"
+  }
+}

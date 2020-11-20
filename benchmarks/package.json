@@ -1,0 +1,23 @@
+{
+  "name": "as-simple-astar-benchmarks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "asc ./assembly/index.ts -o dist/perf.wasm",
+    "build:debug": "asc ./assembly/index.ts -o dist/perf-debug.wasm -t dist/perf-debug.wat --debug --sourceMap",
+    "start:debug": "env DEBUG=1 node index.js",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@assemblyscript/loader": "^0.17.2",
+    "assemblyscript": "^0.17.2"
+  },
+  "dependencies": {
+    "as-simple-astar": "file:..",
+    "pathfinding": "^0.4.18"
+  }
+}
