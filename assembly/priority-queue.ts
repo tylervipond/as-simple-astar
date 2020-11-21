@@ -70,4 +70,8 @@ export class PriorityQueue<T> {
     empty(): boolean {
         return this.size === 0;
     }
+
+    clear(): void {
+        this.size = 0;
+    }
 }

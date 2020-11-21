@@ -6,7 +6,7 @@
   "ascMain": "assembly/index.ts",
   "type": "module",
   "scripts": {
-    "build": "asc ./assembly/index.ts -o dist/as-simple-astar.wasm",
+    "build": "asc ./assembly/index.ts -o dist/as-simple-astar.wasm -O3 --noAssert",
     "build:debug": "asc ./assembly/index.ts -o dist/as-simple-astar-debug.wasm -t dist/as-simple-astar-debug.wat --debug --sourceMap",
     "start": "node index.js",
     "start:debug": "env DEBUG=1 node index.js",
